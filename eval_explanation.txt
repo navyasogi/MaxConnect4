@@ -1,0 +1,20 @@
+Evaluation Function:
+Assuming Player 2  is maximizing, Player1 minimizing.
+If Board is full, if Player 2 wins it returns a large value.
+if player1 wins it return negaive of large value.
+0 if it is a draw.
+
+If depth limit is reached before board is full:
+we give weighted values as follows.
+Four 2's: Count*1000
+Three 2's: Count*50
+Two 2's: Count*10
+
+Four 1's: -Count*1000
+Three 1's: -Count*50
+Two 1's: -Count*10
+
+Threes and twos considered above are only those values which may 
+result in a 4.
+Eg: 1110 will be considered, as 1111 is possible.
+    1112 will not be considered, as 1111 can never be formed.
